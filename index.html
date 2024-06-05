@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Singh Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">AMIT SINGH</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="parallax">
+        <div class="card home-card">
+            <div class="card-image">
+                <img src="me2.png" alt="Amit Singh">
+            </div>
+            <div class="card-content">
+                <h1>AMIT SINGH</h1>
+                <h2>FRONTEND WEB DEVELOPER</h2>
+                <ul class="skills">
+                    <li><img src="/html.png" alt="HTML">HTML</li>
+                    <li><img src="css.png" alt="CSS">CSS</li>
+                    <li><img src="/javascript.png" alt="JavaScript">JavaScript</li>
+                    <li><img src="/bootstrap.png" alt="Bootstrap">Bootstrap</li>
+                </ul>
+                <button class="card-button">Know More</button>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <h1>About Me</h1>
+        <div class="cards-container">
+            <div class="card about-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>Biography</h2>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                            <li>Born in Kotputli, Brought up in Bikaner</li>
+                            <li>89% in class 10 and 90% in class 12</li>
+                            <li>Failed in JEE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card about-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>Interests & Hobbies</h2>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                            <li>Interests: Listening Songs, Drawing, and Solving Mathematics questions</li>
+                            <li>Hobbies: Middle class boy has no hobbies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card about-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>Career Objective</h2>
+                    </div>
+                    <div class="card-back">
+                        <p><ul><li>Currently I'm learning new technologies and exploring things</li></ul></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills-section">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <div class="card skills-card">
+                <div class="card-front">
+                    <img src="/technical skill.png" alt="Technical Skill">
+                    <h2>Technical Skills</h2>
+                </div>
+                <div class="card-back">
+                    <p>HTML, CSS, Bootstrap,JavaScript, C</p>
+                </div>
+            </div>
+            <div class="card skills-card">
+                <div class="card-front">
+                    <img src="/tool.png" alt="Tools">
+                    <h2>Tools</h2>
+                </div>
+                <div class="card-back">
+                    <p>VS Code, Github, Canva , ChatGPT</p>
+                </div>
+            </div>
+            <div class="card skills-card">
+                <div class="card-front">
+                    <img src="/soft skill.jpg" alt="Soft Skill">
+                    <h2>Soft Skills</h2>
+                </div>
+                <div class="card-back">
+                    <p>Communication, Teamwork, Problem-solving</p>
+                </div>
+            </div>
+            <div class="card skills-card">
+                <div class="card-front">
+                    <img src="learing.png" alt="Learning Goal">
+                    <h2>Learning Goals</h2>
+                </div>
+                <div class="card-back">
+                    <p>Exploring Machine Learning, Improving backend skills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="education" class="education-section">
+        <h1>Education</h1>
+        <div class="education-container">
+            <div class="card education-card">
+                <div class="card-front">
+                    <img src="/school logo.jpeg" alt="School">
+                    <h2>School</h2>
+                </div>
+                <div class="card-back">
+                    <h3>Class 12</h3>
+                    <p>90%</p>                
+                    
+                </div>
+            </div>
+            <div class="card education-card">
+                <div class="card-front">
+                    <img src="/college logo.jpg" alt="College">
+                    <h2>College</h2>
+                </div>
+                <div class="card-back">
+                    <h3>Current</h3>
+                    <p>First Year, CSE at Poornima Institute of Engineering and Technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h1>Contact Me</h1>
+        <div class="contact-container">
+            <div class="card contact-card">
+                <div class="card-front">
+                    <h2>Contact Form</h2>
+                </div>
+                <div class="card-back">
+                    <!-- Contact Form -->
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card contact-card">
+                <div class="card-front">
+                    <h2>Contact Information</h2>
+                </div>
+                <div class="card-back">
+                    <!-- Contact Information -->
+                    <ul class="contact-info">
+                        <li><img src="gmail.png" alt="Email">itsmeamitsingh17@gmail.com</li>
+                        <li><img src="call.png" alt="Phone">+917597039713</li>
+                        <li><img src="linkdin.png" alt="LinkedIn"><a href="https://www.linkedin.com/in/amit-singh-7246002b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1RVhDUVARz%2BAeT6%2Fx0T4qw%3D%3D">Amit Singh </a></li>
+                        <li><img src="github.png" alt="GitHub"><a href="https://github.com/itsamitshekhawat17
+                            ">
+                            itsamitshekhawat17</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
