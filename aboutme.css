@@ -1,0 +1,76 @@
+/* about.css */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark theme background color */
+    color: #ffffff; /* Light text color for contrast */
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.about-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: rotateX(100px) rotateY(-100deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}

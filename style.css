@@ -1,0 +1,479 @@
+/* ... existing styles ... */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark theme background color */
+    color: #ffffff; /* Light text color for contrast */
+}
+
+header {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+.logo a:hover {
+    color: #ffd700; /* Golden color */
+    box-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700; /* Golden color */
+    box-shadow: 0 0 5px #ffd700, 0 0 8px #ffd700, 0 0 11px #ffd700;
+}
+
+/* Parallax background */
+.parallax {
+    background-image: url(/pexels-jeremy-bishop-1260133-2923591.jpg); /* Replace with your image path */
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling */
+.card {
+    width: 64%;
+    background-color: transparent; /* Make the card transparent by default */
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card.home-card {
+    cursor: pointer;
+}
+
+.card.home-card:hover, .card.home-card.clicked {
+    background-color: #1e1e1e;
+}
+
+.card-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    flex: 2;
+    padding: 2rem;
+    opacity: 0; /* Start with transparent text */
+    transition: opacity 0.3s;
+}
+
+.card-content h1, .card-content h2 {
+    margin: 0;
+}
+
+.card-content ul.skills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.card-content ul.skills li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-content ul.skills li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-content ul.skills li:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700;
+}
+
+.card-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    background-color: #594e12;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card-button:hover {
+    background-color: #e3bb19;
+    transform: scale(1.1);
+}
+
+/* About section */
+.about-section {
+    padding: 5rem 2rem 2rem; /* Add padding to the top */
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem; /* Add margin to the top */
+}
+
+.about-card {
+    background-color: transparent;
+    border: none;
+    perspective: 1000px; /* For 3D effect */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background-color: #1e1e1e;
+}
+
+.card-back {
+    background-color: #4d4c4c;
+    transform: rotateY(180deg);
+}
+
+.card-front h2, .card-back ul, .card-back p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-back li {
+    margin-bottom: 0.5rem;
+}
+
+.card-back p {
+    font-size: 1rem;
+}
+
+/* Skills section */
+.skills-section {
+    padding: 5rem 2rem 2rem; /* Add padding to the top */
+    text-align: center;
+}
+
+.skills-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem; /* Add margin to the top */
+}
+
+.skills-card {
+    background-color: #1e1e1e;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 20%; /* Less width */
+    height: 300px; /* More height */
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.skills-card:hover {
+    transform: translateY(10px);
+}
+
+.skills-card .card-front, .skills-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.skills-card .card-front {
+    background-color: #1e1e1e;
+}
+
+.skills-card .card-front img {
+    width: 100px; /* Circular photo size */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem; /* Margin below the image */
+}
+
+.skills-card .card-back {
+    background-color: #4d4c4c;
+    transform: translateY(100%);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skills-card:hover .card-back {
+    transform: translateY(0);
+    background-color: #bd648f; /* Different color on hover */
+}
+
+.skills-card h2, .skills-card p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.skills-card .card-back p {
+    color: #1e1e1e; /* Dark text for contrast */
+}
+
+/* Education section */
+.education-section {
+    padding: 5rem 2rem 2rem; /* Add padding to the top */
+    text-align: center;
+}
+
+.education-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.education-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem; /* Add margin to the top */
+}
+
+.education-card {
+    background-color: #1e1e1e;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 20%; /* Less width */
+    height: 300px; /* More height */
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(10px);
+}
+
+.education-card .card-front, .education-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.education-card .card-front {
+    background-color: #1e1e1e;
+}
+
+.education-card .card-front img {
+    width: 100px; /* Circular photo size */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem; /* Margin below the image */
+}
+
+.education-card .card-back {
+    background-color: #4d4c4c;
+    transform: translateY(100%);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.education-card:hover .card-back {
+    transform: translateY(0);
+    background-color: #bd648f; /* Different color on hover */
+}
+
+.education-card h2, .education-card p, .education-card h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.education-card .card-back p, .education-card .card-back h3 {
+    color: #1e1e1e; /* Dark text for contrast */
+}
+.contact-section {
+    padding: 5rem 2rem 2rem; /* Add padding to the top */
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem; /* Add margin to the top */
+}
+
+.contact-card {
+    background-color: #1e1e1e;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 45%; /* Adjust width */
+    height: 300px; /* More height */
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(10px);
+}
+
+.contact-card .card-front, .contact-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.contact-card .card-front {
+    background-color: #1e1e1e;
+}
+
+.contact-card .card-front h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.contact-card .card-back {
+    background-color: #4d4c4c;
+    transform: translateY(100%);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.contact-card:hover .card-back {
+    transform: translateY(0);
+    background-color: #bd648f; /* Different color on hover */
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
